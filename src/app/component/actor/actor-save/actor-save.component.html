@@ -1,0 +1,35 @@
+<div class="container">
+    <h2>Create Course </h2>
+    <div class="form-row" *ngIf="showMsg">
+        <div class="alert alert-{{type}} col-md-12" role="alert">
+            {{msg}}
+        </div>
+
+    </div>
+
+    <form #actorsForm="ngForm">
+
+        <div class="form-row">
+            <div class="col-md-4">
+           <label>ID:</label>
+           <input type="text" id="actorID" name="actorID" placeholder="Enther course ID" 
+           class="form-control" #actorID [(ngModel)]="actors.actorID"/> 
+            </div>
+            
+            <div class="col-md-4">
+                <label>nombre Actor:</label>
+                <input type="text" id="nombreActor" name="nombreActor" placeholder="Enther course title" 
+                class="form-control" #nombreActor [(ngModel)]="actors.nombreActor"/> 
+            </div>
+            
+            <div class="col-md-4">
+                <label>fecha Nacimiento:</label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento" placeholder="Enther course credits" 
+                class="form-control" #fechaNacimiento [(ngModel)]="actors.fechaNacimiento"/> 
+            </div>
+        </div>
+        <br>
+         <button class="btn btn-outline-primary btn-sm" (click)="save()">Save</button>
+         <a class="btn btn-outline-primary btn-sm" [routerLink]="['/actor-list']">Back</a>
+    </form>
+</div>

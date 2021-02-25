@@ -1,0 +1,30 @@
+<div class="container">
+    <h1>Peliculas</h1>
+    <!-- <a class="btn btn-sm btn-outline-primary" [routerLink]="['/course-saves']">Save</a> -->
+    <table class="table table-bordered">
+     <thead>
+         <tr>
+         
+         <td>tipopeliculaID</td>
+         <td>Categorias</td>
+         <td>nombre Actor</td>
+         <td>ID</td>
+
+         
+        </tr>
+        <tr *ngFor="let item of  pelicula"> 
+        
+            <td>{{ item.tipopeliculaID }}</td>
+            
+
+            
+            <td>
+                <!-- <a class="btn btn-sm btn-outline-warning"   [routerLink]="['/course-edit', item.CourseID ]" >Editar</a> -->
+            </td>
+            
+        </tr>
+        
+    
+     </thead>
+    </table>
+</div> 

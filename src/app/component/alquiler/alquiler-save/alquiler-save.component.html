@@ -1,0 +1,51 @@
+<div class="container">
+    <h2>Alquiler </h2>
+    <div class="form-row" *ngIf="showMsg">
+        <div class="alert alert-{{type}} col-md-12" role="alert">
+            {{msg}}
+        </div>
+
+    </div>
+
+    <form #ClienteForm="ngForm">
+
+        <div class="form-row">
+            <div class="col-md-4">
+           <label>alquilerID </label>
+           <input type="text" id="alquilerID" name="alquilerID" placeholder="Enther clienteID " 
+           class="form-control" #alquilerID [(ngModel)]="alquilers.alquilerID"/> 
+            </div>
+            
+            <div class="col-md-4">
+                <label>clienteID:</label>
+                <input type="text" id="clienteID" name="clienteID" placeholder="Ingrese el nombre" 
+                class="form-control" #clienteID [(ngModel)]="alquilers.clienteID"/> 
+            </div>
+            
+            <div class="col-md-4">
+                <label>fechaAlquiler:</label>
+                <input type="date" id="fechaAlquiler" name="fechaAlquiler" placeholder="Ingrese la direccion" 
+                class="form-control" #fechaAlquiler [(ngModel)]="alquilers.fechaAlquiler"/> 
+            </div>
+            
+            <div class="col-md-4">
+                <label>fechaDevolucion:</label>
+                <input type="date" id="fechaDevolucion" name="fechaDevolucion" placeholder="Ingrese el numero de telefono " 
+                class="form-control" #fechaDevolucion [(ngModel)]="alquilers.fechaDevolucion"/> 
+            </div>
+            <div class="col-md-4">
+                <label>valorAlquiler:</label>
+                <input type="number" id="valorAlquiler" name="valorAlquiler" placeholder="Ingrese el numero de telefono " 
+                class="form-control" #valorAlquiler [(ngModel)]="alquilers.valorAlquiler"/> 
+            </div>
+            <div class="col-md-4">
+                <label>cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" placeholder="Ingrese el numero de telefono " 
+                class="form-control" #cantidad [(ngModel)]="alquilers.cantidad"/> 
+            </div>
+        </div>
+        <br>
+         <button class="btn btn-outline-primary btn-sm" (click)="save()">Save</button>
+         <a class="btn btn-outline-primary btn-sm" [routerLink]="['/alquiler-list']">Back</a>
+    </form>
+</div>

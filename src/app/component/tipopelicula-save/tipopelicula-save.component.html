@@ -1,0 +1,35 @@
+<div class="container">
+    <h2>Crear Tipo Pelicula </h2>
+    <div class="form-row" *ngIf="showMsg">
+        <div class="alert alert-{{type}} col-md-12" role="alert">
+            {{msg}}
+        </div>
+
+    </div>
+
+    <form #tipoPeliculaForm="ngForm">
+
+        <div class="form-row">
+            <div class="col-md-4">
+           <label>tipopeliculaID</label>
+           <input type="text" id="tipopeliculaID" name="tipopeliculaID" placeholder="Enther tipopeliculaID " 
+           class="form-control" #tipopeliculaID [(ngModel)]="tipoPeliculas.tipopeliculaID"/> 
+            </div>
+            
+            <div class="col-md-4">
+                <label>categoria:</label>
+                <input type="text" id="categoria" name="categoria" placeholder="Enther tipo de pelicula-categoria" 
+                class="form-control" #categoria [(ngModel)]="tipoPeliculas.categoria"/> 
+            </div>
+            
+            <div class="col-md-4">
+                <label>Credits:</label>
+                <input type="text" id="titulo" name="titulo" placeholder="Enther tipo de pelicula titulo" 
+                class="form-control" #titulo [(ngModel)]="tipoPeliculas.titulo"/> 
+            </div>
+        </div>
+        <br>
+         <button class="btn btn-outline-primary btn-sm" (click)="save()">Save</button>
+         <a class="btn btn-outline-primary btn-sm" [routerLink]="['/tipopelicula-lista']">Back</a>
+    </form>
+</div>

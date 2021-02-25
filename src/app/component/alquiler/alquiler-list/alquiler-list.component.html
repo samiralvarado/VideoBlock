@@ -1,0 +1,32 @@
+<div class="container">
+    <h1>Alquiler</h1>
+    <!-- <a class="btn btn-sm btn-outline-primary" [routerLink]="['/course-saves']">Save</a> -->
+    <table class="table table-bordered">
+     <thead>
+         <tr>
+         <td>id_alquiler</td>
+         <td>id_cliente</td>
+         <td>fechaAlquiler</td>
+         <td>Fecha Devolucion</td>
+         <td>Valor Alquiler</td>
+         <td>Cantidad</td>
+         <td></td>
+         
+        </tr>
+        <tr *ngFor="let item of alquilers"> 
+           
+            <td>{{ item.alquilerID }}</td>
+            <td>{{ item.clienteID }}</td>
+            <td>{{item.fechaAlquiler }}</td>
+            <td>{{item.fechaDevolucion }}</td>
+            <td>{{item.valorAlquiler }}</td>
+            <td>{{item.cantidad }}</td>
+            <td>
+                <!-- <a class="btn btn-sm btn-outline-warning"   [routerLink]="['/course-edit', item.CourseID ]" >Editar</a> -->
+                <a class="btn btn-sm btn-outline-warning"   [routerLink]="['/alquiler-save' ]" >CREAR</a>
+            </td>
+        </tr>
+    
+     </thead>
+    </table>
+</div> 

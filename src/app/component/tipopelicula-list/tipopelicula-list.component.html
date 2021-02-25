@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>Tipo Peliculas</h1>
+    <!-- <a class="btn btn-sm btn-outline-primary" [routerLink]="['/course-saves']">Save</a> -->
+    <table class="table table-bordered">
+     <thead>
+         <tr>
+         <td>ID</td>
+         <td>Categoria</td>
+         <td>Titulo</td>
+         
+         
+        </tr>
+        <tr *ngFor="let item of tipoPeliculas"> 
+
+            <td>{{ item.tipopeliculaID }}</td>
+            <td>{{ item.categoria }}</td>
+            <td>{{item.titulo }}</td>
+            <td>
+                <a class="btn btn-sm btn-outline-warning"   [routerLink]="['/tiporpelicula-save']" >Guardar</a>
+                <a class="btn btn-sm btn-outline-warning"   [routerLink]="['/tipoPelicula-edit', item.tipopeliculaID]" >Editar</a>
+            </td>
+        </tr>
+     </thead>
+    </table>
+</div> 

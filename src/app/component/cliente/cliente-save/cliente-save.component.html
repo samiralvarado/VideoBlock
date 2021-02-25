@@ -1,0 +1,41 @@
+<div class="container">
+    <h2>Cliente </h2>
+    <div class="form-row" *ngIf="showMsg">
+        <div class="alert alert-{{type}} col-md-12" role="alert">
+            {{msg}}
+        </div>
+
+    </div>
+
+    <form #ClienteForm="ngForm">
+
+        <div class="form-row">
+            <div class="col-md-4">
+           <label>Cliente ID</label>
+           <input type="text" id="clienteID" name="clienteID" placeholder="Enther clienteID " 
+           class="form-control" #clienteID [(ngModel)]="clientes.clienteID"/> 
+            </div>
+            
+            <div class="col-md-4">
+                <label>categoria:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingrese el nombre" 
+                class="form-control" #nombre [(ngModel)]="clientes.nombre"/> 
+            </div>
+            
+            <div class="col-md-4">
+                <label>Credits:</label>
+                <input type="text" id="direccion" name="direccion" placeholder="Ingrese la direccion" 
+                class="form-control" #direccion [(ngModel)]="clientes.direccion"/> 
+            </div>
+            
+            <div class="col-md-4">
+                <label>Credits:</label>
+                <input type="text" id="telefono" name="telefono" placeholder="Ingrese el numero de telefono " 
+                class="form-control" #telefono [(ngModel)]="clientes.telefono"/> 
+            </div>
+        </div>
+        <br>
+         <button class="btn btn-outline-primary btn-sm" (click)="save()">Save</button>
+         <a class="btn btn-outline-primary btn-sm" [routerLink]="['/cliente-list']">Back</a>
+    </form>
+</div>
